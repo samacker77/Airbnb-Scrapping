@@ -15,5 +15,7 @@ guests = input("Enter number of guests: ")
 url = "https://www.airbnb.co.in/s/"+location+"/homes?adults=2&checkin="+check_in+"&checkout="+check_out+"&guests="+guests+"&place_id=ChIJwe1EZjDG5zsRaYxkjY_tpF0&allow_override%5B%5D=&s_tag=N9fRr9A1"
 airbnb_r = requests.get(url)
 airbnb_soup = BeautifulSoup(airbnb_r.text, 'html.parser')
-for link in airbnb_soup.findAll('a'):
-	uprint(link)
+for name in airbnb_soup.findAll('span',{'class':'text_5mbkop-o_O-size_small_1gg2mc-o_O-weight_bold_153t78d-o_O-inline_g86r3e'}):
+	uprint(name.text)
+
+ 
