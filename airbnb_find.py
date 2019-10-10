@@ -1,5 +1,6 @@
 import sys
 import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
     enc = file.encoding
